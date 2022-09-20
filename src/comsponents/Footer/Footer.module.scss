@@ -1,0 +1,15 @@
+@import '/src/utils/styles.scss';
+.footer {
+    @include border;
+    box-sizing: border-box;
+    padding: 6px;
+    
+    position: absolute;
+    bottom: 0;
+    
+    width: calc(100% - 12px);
+    
+    height: 60px;
+    display: flex;
+    align-items: center;
+};

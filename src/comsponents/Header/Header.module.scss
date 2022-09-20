@@ -1,0 +1,11 @@
+@import '/src/utils/styles.scss';
+
+.header {
+    @include border;
+    box-sizing: border-box;
+    padding: 6px;
+    
+    height: 60px;
+    display: flex;
+    align-items: center;
+};

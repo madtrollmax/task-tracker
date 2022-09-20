@@ -1,0 +1,1 @@
+export {BoardsPanel} from './BoardsPanel'

@@ -1,0 +1,1 @@
+export {BoardRedirect} from './BoardRedirect';

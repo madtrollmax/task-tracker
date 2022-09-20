@@ -1,0 +1,10 @@
+@import '/src/utils/styles.scss';
+.column {
+    @include border;
+    width: 240px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

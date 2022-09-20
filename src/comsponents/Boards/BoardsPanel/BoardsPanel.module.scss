@@ -1,0 +1,80 @@
+@import '/src/utils/styles.scss';
+
+.boards-panel {
+    @include border;
+    box-sizing: border-box;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-shrink: 0;
+    
+    height: 100%;
+    width: 480px;
+    @media (max-width:480px) {
+        width: calc(100% - 12px);
+        position: absolute;
+        background-color: white;
+    }
+
+    &.hide {
+        width: 40px;
+    }
+
+    .arrow-left {
+        margin-left: auto;
+    }
+
+    .arrow-right {
+        align-self: center;
+    }
+
+    .boards-list {
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 80px);
+
+        @include scrollbar;
+    }
+    & .item {
+        @include border;
+        &.minimaized {
+            border: none;
+            .actions {
+                display: inline;
+            }
+            align-self: center;
+            width: 24px;
+        }
+
+        height: 36px;
+        margin: 3px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+
+        input {
+            max-width: 380px;
+            @media (max-width:480px) {
+                width: calc(100% - 60px);
+            }
+            width: 100%;
+        }
+
+        .actions {
+            display: none;
+            @media (max-width:480px) {
+                display: inline;
+            }
+        }
+
+        &:hover {
+            .actions {
+                display: inline;
+            }
+        }
+    }
+}
